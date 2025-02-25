@@ -19,7 +19,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import org.example.project.estilos.Gray
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import sisaalpha.composeapp.generated.resources.Res
 import sisaalpha.composeapp.generated.resources.mostraricono
 import sisaalpha.composeapp.generated.resources.ocultaricono
@@ -42,8 +41,10 @@ fun CtextField(
         onValueChange = onValueChange,
         modifier = modifier.fillMaxWidth(),
         textStyle = MaterialTheme.typography.body2,
+
         keyboardOptions = KeyboardOptions.Default.copy(
             keyboardType = keyboardType),
+
         colors = TextFieldDefaults.textFieldColors(
             backgroundColor = if (isSystemInDarkTheme()){
                 MaterialTheme.colors.surface
@@ -53,6 +54,7 @@ fun CtextField(
             unfocusedIndicatorColor = Color.Transparent,
             focusedIndicatorColor = Color.Transparent
         ),
+
         trailingIcon = if (isPassswordTextField) {
             {
                 PasswordEyeIcon(
@@ -65,11 +67,16 @@ fun CtextField(
         }else{
             null
         },
+
         visualTransformation = if (isPassswordTextField && !PasswordVisible) {
             VisualTransformation.None
         } else {
             VisualTransformation.None
         },
+
+        shape = MaterialTheme.shapes.medium
+
+
     )
 
 }
@@ -89,13 +96,3 @@ fun PasswordEyeIcon(
     }
 }
 
-
-@Preview
-@Composable
-fun PreviewCTextField() {
-    CtextField(
-        value = "",
-        onValueChange = {},
-        isPassswordTextField = true
-    )
-}
