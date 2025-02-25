@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -19,9 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.example.project.componentes.CtextField
-import org.example.project.estilos.AtlasAppTheme
 import org.example.project.estilos.BotonHeight
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun PantallaInicio(
@@ -33,7 +32,7 @@ fun PantallaInicio(
 ) {
     Column(
         modifier = modifier
-            .fillMaxWidth()
+            .fillMaxSize()
             .verticalScroll(rememberScrollState())
             .background(
                 color = if (isSystemInDarkTheme()){
@@ -55,17 +54,21 @@ fun PantallaInicio(
             value = uiState.username,
             onValueChange = onUsernameChange,
             keyboardType = KeyboardType.Text,
+            placeholderText = "Usuario"
+
         )
         CtextField(
             value = uiState.correo,
             onValueChange = onCorreoChange,
             keyboardType = KeyboardType.Email,
+            placeholderText = "Correo"
         )
         CtextField(
             value = uiState.password,
             onValueChange = onPasswordChange,
             keyboardType = KeyboardType.Password,
-            isPassswordTextField = true
+            isPassswordTextField = true,
+            placeholderText = "Contraseña"
         )
 
         Button(
