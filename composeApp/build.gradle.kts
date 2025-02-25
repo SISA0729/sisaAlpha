@@ -98,6 +98,7 @@ android {
 
 dependencies {
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.annotation.jvm)
     debugImplementation(compose.uiTooling)
 }
 

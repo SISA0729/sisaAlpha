@@ -1,20 +1,22 @@
 package org.example.project
 
 
-import androidx.compose.material.Text
-import androidx.compose.runtime.*
 import org.example.project.estilos.AtlasAppTheme
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
-
-
+import androidx.compose.ui.text.input.KeyboardType
+import org.example.project.componentes.CtextField
 
 
 @Composable
 @Preview
 fun App() {
     AtlasAppTheme {
-        val text by remember { mutableStateOf("Hello, World!") }
-        Text(text)
+        CtextField(
+            value = "",
+            onValueChange = { },
+            keyboardType = KeyboardType.Text,
+            isPassswordTextField = false,
+        )
     }
 }
