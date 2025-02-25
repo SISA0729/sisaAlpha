@@ -84,16 +84,3 @@ fun PantallaInicio(
         }
     }
 }
-
-@Preview
-@Composable
-fun PantallaInicioPreview() {
-    AtlasAppTheme {
-        PantallaInicio(
-            uiState = PantallaInicioState(),
-            onUsernameChange = {},
-            onCorreoChange = {},
-            onPasswordChange = {},
-        )
-    }
-}
