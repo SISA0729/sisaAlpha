@@ -1,4 +1,4 @@
-package org.example.project.auth.inicio
+package org.example.project.auth.registro
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -23,10 +23,11 @@ import org.example.project.componentes.CtextField
 import org.example.project.estilos.BotonHeight
 
 @Composable
-fun PantallaInicio(
+fun PantallaRegistro(
     modifier: Modifier = Modifier,
-    uiState: PantallaInicioState,
+    uiState: PantallaRegistroState,
     onUsernameChange: (String) -> Unit,
+    onCorreoChange: (String) -> Unit,
     onPasswordChange: (String) -> Unit,
 ) {
     Column(
@@ -57,6 +58,12 @@ fun PantallaInicio(
 
         )
         CtextField(
+            value = uiState.correo,
+            onValueChange = onCorreoChange,
+            keyboardType = KeyboardType.Email,
+            placeholderText = "Correo"
+        )
+        CtextField(
             value = uiState.password,
             onValueChange = onPasswordChange,
             keyboardType = KeyboardType.Password,
@@ -76,7 +83,7 @@ fun PantallaInicio(
             ),
             shape = MaterialTheme.shapes.medium
         ){
-            Text(text = "Iniciar Sesión")
+            Text(text = "Registrarse")
         }
     }
 }
