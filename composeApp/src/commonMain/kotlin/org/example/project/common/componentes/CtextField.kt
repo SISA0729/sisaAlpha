@@ -1,4 +1,4 @@
-package org.example.project.componentes
+package org.example.project.common.componentes
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme

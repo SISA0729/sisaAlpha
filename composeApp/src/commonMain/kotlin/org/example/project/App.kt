@@ -15,7 +15,6 @@ fun App() {
         PantallaInicio(
             uiState = PantallaInicioState(),
             onUsernameChange = {},
-            onCorreoChange = {},
             onPasswordChange = {}
         )
     }
