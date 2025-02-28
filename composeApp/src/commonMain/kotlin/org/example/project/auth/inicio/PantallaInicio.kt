@@ -19,16 +19,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import org.example.project.common.componentes.CtextField
 import org.example.project.estilos.BotonHeight
 
 @Composable
 fun PantallaInicio(
+    navController: NavController,
     modifier: Modifier = Modifier,
     uiState: PantallaInicioState,
     onUsernameChange: (String) -> Unit,
     onPasswordChange: (String) -> Unit,
 ) {
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -66,6 +69,8 @@ fun PantallaInicio(
 
         Button(
             onClick = {
+
+                navController.navigate("registro")
 
             },
             modifier = modifier

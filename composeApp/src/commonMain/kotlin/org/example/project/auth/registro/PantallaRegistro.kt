@@ -19,11 +19,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import org.example.project.common.componentes.CtextField
 import org.example.project.estilos.BotonHeight
 
 @Composable
 fun PantallaRegistro(
+    navController: NavController,
     modifier: Modifier = Modifier,
     uiState: PantallaRegistroState,
     onUsernameChange: (String) -> Unit,
@@ -73,6 +75,8 @@ fun PantallaRegistro(
 
         Button(
             onClick = {
+
+                navController.navigate("inicio")
 
             },
             modifier = modifier
