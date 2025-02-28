@@ -66,6 +66,7 @@ kotlin {
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.tabNavigator)
             implementation(libs.jetbrains.compose.navigation)
+            implementation(libs.accompanist.navigation.animation)
 
         }
         desktopMain.dependencies {
