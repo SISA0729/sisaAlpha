@@ -11,12 +11,25 @@ import org.example.project.auth.inicio.PantallaInicioState
 import org.example.project.auth.registro.PantallaRegistro
 import org.example.project.auth.registro.PantallaRegistroState
 import androidx.compose.animation.*
+import org.example.project.aplicacion.Empezar
 
 
 @Composable
 fun NavegacionApp() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "inicio") {
+    NavHost(navController = navController, startDestination = "empezar") {
+        composable("empezar",
+            enterTransition = {
+                scaleIn(initialScale = 0.8f) + fadeIn()
+            },
+            exitTransition = {
+                scaleOut(targetScale = 1.2f) + fadeOut()
+            }
+        ) {
+            Empezar(
+                navController = navController
+            )
+        }
         composable("inicio",
             enterTransition = {
                 scaleIn(initialScale = 0.8f) + fadeIn()

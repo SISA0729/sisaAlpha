@@ -20,12 +20,13 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import org.jetbrains.compose.resources.painterResource
 import sisaalpha.composeapp.generated.resources.Res
 import sisaalpha.composeapp.generated.resources.atlasinventory
 
 @Composable
-fun Empezar() {
+fun Empezar(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -46,7 +47,7 @@ fun Empezar() {
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = "Entra en tu inventario",
-            style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF673AB7))
+            style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1E80F8))
         )
         Text(
             text = "Multiples opciones para tu negocio",
@@ -58,11 +59,14 @@ fun Empezar() {
         Text("Colabora de manera efectiva con tu equipo",color = if (isSystemInDarkTheme()) Color.White else MaterialTheme.colors.onSurface)
         Spacer(modifier = Modifier.height(24.dp))
         Button(
-            onClick = {},
-            colors = ButtonDefaults.buttonColors(Color(0xFF673AB7)),
+            onClick = {
+                navController.navigate("inicio")
+
+            },
+            colors = ButtonDefaults.buttonColors(Color(0xFF1E80F8)),
             modifier = Modifier.fillMaxWidth(0.8f)
         ) {
-            Text(text = "Button", color = Color.White)
+            Text(text = "Empezar", color = Color.White)
         }
     }
 }
