@@ -11,8 +11,15 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 
+
+
 }
 
+repositories {
+    google()
+    mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+}
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -66,13 +73,13 @@ kotlin {
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.tabNavigator)
             implementation(libs.jetbrains.compose.navigation)
-            implementation(libs.accompanist.navigation.animation)
+            
+
 
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
-
 
         }
     }
@@ -108,7 +115,8 @@ android {
 dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.annotation.jvm)
-    debugImplementation(compose.uiTooling)
+
+
 }
 
 compose.desktop {

@@ -36,13 +36,11 @@ fun CtextField(
 
 ) {
 
-    var PasswordVisible by remember {
-        mutableStateOf(false)
-    }
+    var PasswordVisible by remember { mutableStateOf(false) }
 
     TextField(
         value = value,
-        onValueChange = onValueChange,
+        onValueChange = { newText -> onValueChange(newText) },
         modifier = modifier.fillMaxWidth(),
         textStyle = MaterialTheme.typography.body2,
 
