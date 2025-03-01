@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Globo terráqueo -->
+    <path
+        android:pathData="M50,5C25,5 5,25 5,50C5,75 25,95 50,95C75,95 95,75 95,50C95,25 75,5 50,5Z"
+        android:strokeColor="#004D40"
+        android:strokeWidth="2"
+        android:fillColor="#2E7D32"/>
+
+    <!-- Líneas del globo -->
+    <path
+        android:pathData="M20,50H80M50,20V80M30,30Q50,10 70,30M30,70Q50,90 70,70"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:fillColor="none"/>
+
+    <!-- Texto ATLAS -->
+    <path
+        android:pathData="M20,75H80"
+        android:strokeColor="#004D40"
+        android:strokeWidth="6"/>
+
+    <!-- Texto INVENTORY -->
+    <path
+        android:pathData="M30,85H70"
+        android:strokeColor="#004D40"
+        android:strokeWidth="4"/>
+</vector>
