@@ -2,11 +2,13 @@ package org.example.project.aplicacion
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,31 +25,37 @@ import sisaalpha.composeapp.generated.resources.Res
 import sisaalpha.composeapp.generated.resources.atlasinventory
 
 @Composable
-fun ShoeScreen() {
+fun Empezar() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.White)
+            .background(
+                color = if (isSystemInDarkTheme()){
+                    MaterialTheme.colors.background
+                }else{
+                    MaterialTheme.colors.surface
+                }
+            )
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(contentAlignment = Alignment.Center) {
-            CircleDesign()
+            Circulo()
         }
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "Entra en tu estilo",
+            text = "Entra en tu inventario",
             style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF673AB7))
         )
         Text(
-            text = "Un mundo de zapatos",
+            text = "Multiples opciones para tu negocio",
             style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Light, color = Color.Gray)
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Text("Explora los últimos estilos de las mejores marcas")
-        Text("Obtén recomendaciones personalizadas")
-        Text("Disfruta de envíos rápidos y gratuitos")
+        Text("Administra tus tareas pendientes de inventario ",color = if (isSystemInDarkTheme()) Color.White else MaterialTheme.colors.onSurface)
+        Text("Recibe alertas de stock y actualizaciones",color = if (isSystemInDarkTheme()) Color.White else MaterialTheme.colors.onSurface)
+        Text("Colabora de manera efectiva con tu equipo",color = if (isSystemInDarkTheme()) Color.White else MaterialTheme.colors.onSurface)
         Spacer(modifier = Modifier.height(24.dp))
         Button(
             onClick = {},
@@ -60,7 +68,7 @@ fun ShoeScreen() {
 }
 
 @Composable
-fun CircleDesign() {
+fun Circulo() {
     Box(
         modifier = Modifier
             .size(200.dp)
