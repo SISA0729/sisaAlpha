@@ -20,6 +20,7 @@ class PantallaRegistroViewModel: ViewModel() {
     }
 }
 
+
 data class PantallaRegistroState(
     var username: String = "",
     var correo: String = "",

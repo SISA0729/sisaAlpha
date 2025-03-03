@@ -11,14 +11,11 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 
-
-
 }
 
 repositories {
     google()
     mavenCentral()
-    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 kotlin {
     androidTarget {
@@ -73,7 +70,6 @@ kotlin {
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.tabNavigator)
             implementation(libs.jetbrains.compose.navigation)
-            
 
 
         }
@@ -90,7 +86,7 @@ android {
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "org.example.project"
+        applicationId = "com.sisaalpha.composeapp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -112,13 +108,12 @@ android {
     }
 }
 
-dependencies {
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.annotation.jvm)
-    implementation(libs.androidx.material3.android)
+//============================= FIRE BASE ==============================
 
 
-}
+
+//======================================================================
+
 
 compose.desktop {
     application {
