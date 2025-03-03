@@ -119,10 +119,11 @@ fun PantallaInicio(
             ) {
                 Text(
                     text = "¿No tienes una cuenta?",
+                    color = if (isSystemInDarkTheme()) Color.White else MaterialTheme.colors.onSurface,
                     fontSize = 16.sp
                 )
 
-                Spacer(modifier = Modifier.width(4.dp)) // Espacio entre textos
+                Spacer(modifier = Modifier.width(4.dp))
 
                 ClickableText(
                     text = AnnotatedString(
@@ -145,9 +146,9 @@ fun PantallaInicio(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            SocialLoginButton(painterResource(Res.drawable.gmail), onClick = { /* Lógica de inicio con correo */ })
-            SocialLoginButton(painterResource(Res.drawable.facebook), onClick = { /* Lógica de inicio con correo */ })
-            SocialLoginButton(painterResource(Res.drawable.twitter), onClick = { /* Lógica de inicio con correo */ })
+            SocialLoginButton(painterResource(Res.drawable.gmail), onClick = {  })
+            SocialLoginButton(painterResource(Res.drawable.facebook), onClick = {  })
+            SocialLoginButton(painterResource(Res.drawable.twitter), onClick = { })
         }
     }
 }
@@ -161,7 +162,7 @@ fun SocialLoginButton(icon: Painter, onClick: () -> Unit) {
         Icon(
             painter = icon,
             contentDescription = null,
-            tint = Color.Unspecified // Esto evita que el icono se vuelva negro
+            tint = Color.Unspecified
         )
     }
 }
