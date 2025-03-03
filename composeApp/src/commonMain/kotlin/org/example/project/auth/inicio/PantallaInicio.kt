@@ -22,18 +22,11 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -46,13 +39,8 @@ import org.example.project.common.componentes.CtextField
 import org.example.project.estilos.BotonHeight
 import org.jetbrains.compose.resources.painterResource
 import sisaalpha.composeapp.generated.resources.Res
-import sisaalpha.composeapp.generated.resources.atlas
-import sisaalpha.composeapp.generated.resources.atlasinventory
-import sisaalpha.composeapp.generated.resources.correo
 import sisaalpha.composeapp.generated.resources.facebook
 import sisaalpha.composeapp.generated.resources.gmail
-import sisaalpha.composeapp.generated.resources.mostraricono
-import sisaalpha.composeapp.generated.resources.ocultaricono
 import sisaalpha.composeapp.generated.resources.twitter
 
 @Composable
